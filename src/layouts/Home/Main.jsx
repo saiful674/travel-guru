@@ -4,10 +4,12 @@ import { Outlet } from 'react-router-dom';
 import background_img from '../../assets/images/bg/background.png'
 const Main = () => {
     return (
-        <div className='h-screen relative bg-cover bg-center' style={{ backgroundImage: `url(${background_img})` }}>
-            <div className='bg-neutral opacity-40 h-full w-full absolute object-contain '>  </div>
+        <div className='min-h-screen relative bg-cover bg-center flex justify-center items-center' style={{ backgroundImage: `url(${background_img})` }}>
+            <div className='bg-neutral opacity-40 min-h-full w-full absolute object-contain '>  </div>
             <Header></Header>
-            <Outlet></Outlet>
+            <div className='my-container text-white z-10'>
+                <Outlet></Outlet>
+            </div>
         </div>
     );
 };

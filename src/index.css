@@ -11,3 +11,4 @@ body{
 .my-btn{
       @apply rounded-md px-7 py-2 text-black font-medium cursor-pointer
 }
+
