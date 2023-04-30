@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+.my-container{
+    @apply px-5 md:px-10
+}
+.my-btn{
+      @apply rounded-md px-7 py-2 text-black font-medium cursor-pointer
+}
