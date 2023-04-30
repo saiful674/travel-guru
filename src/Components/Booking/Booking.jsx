@@ -3,7 +3,7 @@ import { Link, useLoaderData, } from 'react-router-dom';
 
 const Booking = () => {
     const { id, name, description } = useLoaderData();
-    const divisions = ["Dhaka Division", "Chittagong Division", "Rajshahi Division", "Khulna Division", "Barisal Division", "Sylhet Division", "Rangpur Division", "Mymensingh Division"];
+    const divisions = ["Dhaka", "Chittagong", "Rajshahi", "Khulna", "Barisal", "Sylhet", "Rangpur", "Mymensingh"];
 
     return (
         <div className='grid md:grid-cols-2 gap-5 md:gap-48'>
@@ -15,7 +15,6 @@ const Booking = () => {
                 <div className="form-control">
                     <span className="label-text mb-2">Origin</span>
                     <select className="select select-bordered text-black" required>
-                        <option disabled selected>Select your place</option>
                         {
                             divisions.map((division, indx) => <option
                                 key={indx}
@@ -32,14 +31,14 @@ const Booking = () => {
                 <div className="form-control mt-5 text-black grid grid-cols-2 gap-4">
                     <div>
                         <p className="label-text mb-2">From</p>
-                        <input className='input input-bordered w-full' type="date" required/>
+                        <input className='input input-bordered w-full' type="date" required />
                     </div>
                     <div>
                         <p className="label-text mb-2">To</p>
                         <input className='input input-bordered w-full' type="date" required />
                     </div>
                 </div>
-                <button className='w-full'><Link className='btn btn-warning normal-case mt-7 w-full'>Start Booking</Link></button>
+                <button type='submit' className='w-full btn btn-warning normal-case mt-7'>Start Booking</button>
             </form>
         </div>
     );

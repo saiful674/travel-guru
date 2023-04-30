@@ -10,6 +10,7 @@ import Main from './layouts/Home/Main.jsx';
 import Home from './Components/Home/Home/Home.jsx';
 import Booking from './Components/Booking/Booking.jsx';
 import Destination from './Components/Destination/Destination.jsx';
+import Login from './Components/Login/Login.jsx';
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
       element: <Booking></Booking>,
       loader: ({params})=> fetch(`http://localhost:5000/destination/${params.id}`)
      },
+     {
+      path: 'login',
+      element: <Login></Login>
+     }
     ]
   },
 ]);

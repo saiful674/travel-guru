@@ -16,7 +16,7 @@ const Header = () => {
                         <li><Link to='/destination'>Destination</Link></li>
                         <li><Link to=''>Blogs</Link></li>
                         <li><Link to=''>Contact</Link></li>
-                        <li><Link className='btn btn-warning'>Login</Link></li>
+                        <li><Link to='/login' className='btn btn-warning'>Login</Link></li>
                     </ul>
                 </div>
             </div>
@@ -27,7 +27,7 @@ const Header = () => {
                     <li><Link to='/destination'>Destination</Link></li>
                     <li><Link to=''>Blogs</Link></li>
                     <li><Link to=''>Contact</Link></li>
-                    <li><Link className='btn btn-warning'>Login</Link></li>
+                    <li><Link to='/login' className='btn btn-warning'>Login</Link></li>
                 </ul>
             </div>
         </nav>
