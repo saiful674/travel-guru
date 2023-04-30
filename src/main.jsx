@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Main from './layouts/Home/Main.jsx';
 import Home from './Components/Home/Home/Home.jsx';
+import Booking from './Components/Booking/Booking.jsx';
 import Destination from './Components/Destination/Destination.jsx';
 
 const router = createBrowserRouter([
@@ -20,10 +21,15 @@ const router = createBrowserRouter([
       element: <Home></Home>
      },
      {
-      path : '/destination',
+      path : 'destination',
       element: <Destination></Destination>,
-      loader: ()=> fetch("/destination.json")
-     }
+      loader: ()=> fetch("http://localhost:5000/destinations")
+     },
+     {
+      path : 'destination/:id',
+      element: <Booking></Booking>,
+      loader: ({params})=> fetch(`http://localhost:5000/destination/${params.id}`)
+     },
     ]
   },
 ]);

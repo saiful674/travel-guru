@@ -1,4 +1,6 @@
 import React from 'react';
+import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const DestinationCard = ({singlePlace}) => {
     const {id, name, description,imageLink} = singlePlace ;
@@ -10,7 +12,7 @@ const DestinationCard = ({singlePlace}) => {
                     <div className='md:col-span-2'>
                         <h1 className="text-5xl font-bold">{name}</h1>
                         <p className="py-6">{description}</p>
-                        <button className="btn btn-primary">Get Started</button>
+                        <Link to={`/destination/${id}`} className='btn btn-warning normal-case'>Booking <FaArrowRight className='ml-2'/></Link>
                     </div>
                 </div>
             </div>
