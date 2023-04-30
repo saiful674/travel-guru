@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContex } from '../Provider/AuthProvider/AuthProvider';
 
 const Login = () => {
-    
+    const {loginUser} = useContext(AuthContex)
+
+    const handleLogin =event =>{
+        event.preventDefault();
+        const form = event.target;
+        const email = form.email.value;
+        const password = form.password.value;
+        console.log( email, password)
+        loginUser(email, password)
+        .then(result => {
+            const createdUser = result.user;
+            console.log(createdUser)
+            form.reset();
+        })
+        .catch(error => console.log(error))
+    }
     return (
-        <form className="w-[570px] p-10 border border-warning bg-white rounded-lg text-black">
+        <form onSubmit={handleLogin} className="w-[570px] p-10 border border-warning bg-white rounded-lg text-black">
             <h3 className='text-2xl font-bold mb-5'>Login</h3>
             <div className="form-control">
                 <label className="label">

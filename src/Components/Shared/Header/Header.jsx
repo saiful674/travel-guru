@@ -1,7 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import logo from '../../../assets/images/icons/logo.png'
 import { Link } from 'react-router-dom';
+import { AuthContex } from '../../Provider/AuthProvider/AuthProvider';
 const Header = () => {
+    const { user, logOut } = useContext(AuthContex);
+
+    const handleLogout = () => {
+        logOut()
+            .then()
+            .catch(error => console.log(error))
+    }
     return (
         <nav className="my-container flex justify-between mt-5 navbar bg-transparent absolute top-0 text-white z-30">
             <div className="flex justify-between w-full md:w-fit">
@@ -16,7 +24,12 @@ const Header = () => {
                         <li><Link to='/destination'>Destination</Link></li>
                         <li><Link to=''>Blogs</Link></li>
                         <li><Link to=''>Contact</Link></li>
-                        <li><Link to='/login' className='btn btn-warning'>Login</Link></li>
+                        {
+                            user && <li><p>{user.displayName}</p></li>
+                        }
+                        {
+                            user ? <li><button onClick={handleLogout} className='btn btn-warning'>Logout</button></li> : <li><Link to='/login' className='btn btn-warning'>Login</Link></li>
+                        }
                     </ul>
                 </div>
             </div>
@@ -27,7 +40,12 @@ const Header = () => {
                     <li><Link to='/destination'>Destination</Link></li>
                     <li><Link to=''>Blogs</Link></li>
                     <li><Link to=''>Contact</Link></li>
-                    <li><Link to='/login' className='btn btn-warning'>Login</Link></li>
+                    {
+                        user && <li><p>{user.displayName}</p></li>
+                    }
+                    {
+                        user ? <li><button onClick={handleLogout} className='btn btn-warning'>Logout</button></li> : <li><Link to='/login' className='btn btn-warning'>Login</Link></li>
+                    }
                 </ul>
             </div>
         </nav>
