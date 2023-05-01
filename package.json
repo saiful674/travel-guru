@@ -12,6 +12,7 @@
   "dependencies": {
     "daisyui": "^2.51.6",
     "firebase": "^9.21.0",
+    "google-map-react": "^2.2.0",
     "keen-slider": "^6.8.5",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",

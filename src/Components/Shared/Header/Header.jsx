@@ -22,7 +22,7 @@ const Header = () => {
                         <li><input type="text" placeholder="Search your destination..." className="input border  placeholder:text-white border-white bg-slate-50 bg-opacity-30 w-full max-w-xs" /></li>
                         <li><Link >News</Link></li>
                         <li><Link to='/destination'>Destination</Link></li>
-                        <li><Link to=''>Blogs</Link></li>
+                        <li><Link to='/blog'>Blogs</Link></li>
                         <li><Link to=''>Contact</Link></li>
                         {
                             user && <li><p>{user.displayName}</p></li>
@@ -38,7 +38,7 @@ const Header = () => {
                     <li><input type="text" placeholder="Search your destination..." className="input border  placeholder:text-white border-white bg-slate-50 bg-opacity-30 w-full max-w-xs" /></li>
                     <li><Link >News</Link></li>
                     <li><Link to='/destination'>Destination</Link></li>
-                    <li><Link to=''>Blogs</Link></li>
+                    <li><Link to='/blog'>Blogs</Link></li>
                     <li><Link to=''>Contact</Link></li>
                     {
                         user && <li><p>{user.displayName}</p></li>

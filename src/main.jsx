@@ -14,6 +14,8 @@ import Login from './Components/Login/Login.jsx';
 import Register from './Components/Register/Register.jsx';
 import AuthProvider from './Components/Provider/AuthProvider/AuthProvider.jsx';
 import PrivateRoutes from './Components/PrivateRoutes/PrivateRoutes.jsx';
+import Hotels from './Components/Hotels/Hotels.jsx';
+import Blog from './Components/Blog/Blog.jsx';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,11 @@ const router = createBrowserRouter([
      {
       path : '/',
       element: <Home></Home>
+     },
+     {
+      path : 'blog',
+      element: <Blog></Blog>,
+      loader: ()=> fetch('http://localhost:5000/blog')
      },
      {
       path : 'destination',
@@ -41,6 +48,10 @@ const router = createBrowserRouter([
      {
       path: 'register',
       element: <Register></Register>
+     },
+     {
+      path: 'hotels',
+      element: <Hotels></Hotels>
      },
     ]
   },

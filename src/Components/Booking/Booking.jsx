@@ -1,17 +1,21 @@
 import React from 'react';
-import { useLoaderData, } from 'react-router-dom';
+import { Link, Navigate, useLoaderData, useNavigate, } from 'react-router-dom';
 
 const Booking = () => {
     const { id, name, description } = useLoaderData();
     const divisions = ["Dhaka", "Chittagong", "Rajshahi", "Khulna", "Barisal", "Sylhet", "Rangpur", "Mymensingh"];
-
+    const navigate = useNavigate()
+    const handleBooking = event => {
+        event.preventDefault();
+        return navigate('/hotels')
+    }
     return (
         <div className='grid md:grid-cols-2 gap-5 md:gap-48'>
             <div className="destination-text">
                 <h1 className='text-7xl' style={{ fontFamily: ['Bebas Neue', 'cursive'] }}>{name}</h1>
                 <p>{description}</p>
             </div>
-            <form className="destination-date bg-white px-6 py-5 rounded-lg">
+            <form onSubmit={handleBooking} className="destination-date bg-white px-6 py-5 rounded-lg">
                 <div className="form-control">
                     <span className="label-text mb-2">Origin</span>
                     <select className="select select-bordered text-black" required>
