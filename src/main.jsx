@@ -29,17 +29,17 @@ const router = createBrowserRouter([
      {
       path : 'blog',
       element: <Blog></Blog>,
-      loader: ()=> fetch('http://localhost:5000/blog')
+      loader: ()=> fetch('https://travel-guru-server-saifmdislam231-gmailcom.vercel.app/blog')
      },
      {
-      path : 'destination',
+      path : 'destinations',
       element: <Destination></Destination>,
-      loader: ()=> fetch("http://localhost:5000/destinations")
+      loader: ()=> fetch("https://travel-guru-server-saifmdislam231-gmailcom.vercel.app/destinations")
      },
      {
       path : 'destination/:id',
       element: <PrivateRoutes><Booking></Booking></PrivateRoutes>,
-      loader: ({params})=> fetch(`http://localhost:5000/destination/${params.id}`)
+      loader: ({params})=> fetch(`https://travel-guru-server-saifmdislam231-gmailcom.vercel.app/destination/${params.id}`)
      },
      {
       path: 'login',

@@ -31,7 +31,7 @@ const Login = () => {
         .catch(error => console.log(error))
     }
     return (
-        <form onSubmit={handleLogin} className="w-[570px] mt-32 mb-10 p-10 border border-warning bg-white rounded-lg text-black">
+        <form onSubmit={handleLogin} className="w-full md:w-[570px] mt-32 mb-10 p-10 border border-warning bg-white rounded-lg text-black">
             <h3 className='text-2xl font-bold mb-5'>Login</h3>
             <div className="form-control">
                 <label className="label">

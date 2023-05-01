@@ -26,13 +26,13 @@ const Register = () => {
         .catch(error => console.log(error))
     }
     return (
-        <form onSubmit={handleCreateUser} className="w-[570px] mt-32 mb-10 p-10 border border-warning bg-white rounded-lg text-black">
+        <form onSubmit={handleCreateUser} className="w-full md:w-[570px] mt-32 mb-10 p-10 border border-warning bg-white rounded-lg text-black">
         <h3 className='text-2xl font-bold mb-5'>Create an account</h3>
         <div className="form-control">
             <label className="label">
                 <span className="label-text">Name</span>
             </label>
-            <input type="text" name='name' placeholder="Name" className="input input-bordered"  required/>
+            <input type="text" name='name' placeholder="Name" className="input input-bordered w-full"  required/>
         </div>
         <div className="form-control">
             <label className="label">
