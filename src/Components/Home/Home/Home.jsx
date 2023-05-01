@@ -21,7 +21,7 @@ const Home = () => {
             <div className="banner-text">
                 <h1 className='text-7xl mb-5' style={{ fontFamily: ['Bebas Neue', 'cursive'] }}>Let's Start Travel </h1>
                 <p>Our vision is to be the top travel agency in the industry, providing exceptional customer service and innovative travel solutions while promoting sustainable and ethical tourism practices. We aim to inspire people to explore the world, creating lasting connections and a more connected global community.</p>
-                <Link to='/destination' className='mt-5 btn btn-warning normal-case'>See Destination <FaArrowRight className='ml-2'/></Link>
+                <Link to='/destinations' className='mt-5 btn btn-warning normal-case'>See Destination <FaArrowRight className='ml-2'/></Link>
             </div>
             <div className="banner-slider">
                 <div ref={sliderRef} className="keen-slider">
