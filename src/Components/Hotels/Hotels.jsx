@@ -5,12 +5,12 @@ import hotel3 from '../../assets/images/hotels/Rectangle 28.png'
 import { FaStar } from 'react-icons/fa';
 const Hotels = () => {
     return (
-        <div className='text-left mt-36'>
+        <div className='text-left mt-36 mb-10'>
             <p>252 stays Apr 13-17 3 guests</p>
             <h4 className='text-2xl' style={{ fontFamily: ['Bebas Neue', 'cursive'] }}>Stay in Cox's Bazar</h4>
             <div className="grid md:grid-cols-2 gap-5">
                <div>
-               <div className='grid grid-cols-2 gap-4 mb-5'>
+               <div className='grid md:grid-cols-2 gap-4 mb-5'>
                     <img src={hotel1} alt="" />
                     <div className="text">
                         <h6 className=' font-bold text-xl'>Light bright airy stylish apt & safe peaceful stay</h6>
@@ -23,7 +23,7 @@ const Hotels = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 gap-4 mb-5'>
+                <div className='grid md:grid-cols-2 gap-4 mb-5'>
                     <img src={hotel2} alt="" />
                     <div className="text">
                         <h6 className=' font-bold text-xl'>Light bright airy stylish apt & safe peaceful stay</h6>
@@ -36,7 +36,7 @@ const Hotels = () => {
                         </div>
                     </div>
                 </div>
-                <div className='grid grid-cols-2 gap-4 mb-5'>
+                <div className='grid md:grid-cols-2 gap-4 mb-5'>
                     <img src={hotel3} alt="" />
                     <div className="text">
                         <h6 className=' font-bold text-xl'>Light bright airy stylish apt & safe peaceful stay</h6>

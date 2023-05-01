@@ -10,7 +10,7 @@ const Booking = () => {
         return navigate('/hotels')
     }
     return (
-        <div className='grid md:grid-cols-2 gap-5 md:gap-48'>
+        <div className='mt-32 mb-10 grid md:grid-cols-2 gap-5 md:gap-48'>
             <div className="destination-text">
                 <h1 className='text-7xl' style={{ fontFamily: ['Bebas Neue', 'cursive'] }}>{name}</h1>
                 <p>{description}</p>
