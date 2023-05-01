@@ -6,7 +6,7 @@ const Destination = () => {
     const destination = useLoaderData();
     console.log(destination)
     return (
-        <div className='mt-24'>
+        <div className='mt-32'>
            {
             destination.map(singlePlace => <DestinationCard
             key={singlePlace.id}

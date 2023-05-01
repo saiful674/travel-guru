@@ -20,6 +20,7 @@ const Home = () => {
         <div className='grid md:grid-cols-2 gap-5'>
             <div className="banner-text">
                 <h1 className='text-7xl mb-24' style={{ fontFamily: ['Bebas Neue', 'cursive'] }}>Lets Start Travel </h1>
+                <p></p>
                 <Link to='/destination' className='btn btn-warning normal-case'>See Destination <FaArrowRight className='ml-2'/></Link>
             </div>
             <div className="banner-slider">

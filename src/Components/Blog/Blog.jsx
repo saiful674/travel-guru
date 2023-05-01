@@ -1,11 +1,20 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import BlogCard from '../Card/BlogCard/BlogCard';
 
 const Blog = () => {
     const blogs = useLoaderData();
     return (
-        <div>
-            blogs {blogs.length}
+        <div className='mt-32 mb-10'>
+            <h1 className='text-5xl text-center' style={{ fontFamily: ['Bebas Neue', 'cursive'] }}>Our Recent Blogs </h1>
+            <div className='grid md:grid-cols-2 gap-6 mt-5'>
+                {
+                    blogs.map(sinBlog => <BlogCard
+                    key={sinBlog.id}
+                    sinBlog={sinBlog}
+                    ></BlogCard>)
+                }
+            </div>
         </div>
     );
 };
